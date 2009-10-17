@@ -422,6 +422,7 @@ public class TmxFrame extends BaseFrame {
      * @version 1.0
      */
     private class ActionAddNew extends AbstractAction {
+        private static final long serialVersionUID = 1L;
         private TmxFrame owner;
 
         private ActionAddNew(String name, Icon icon, TmxFrame owner) {
@@ -453,6 +454,7 @@ public class TmxFrame extends BaseFrame {
      * @version 1.0
      */
     private class ActionEdit extends AbstractAction {
+        private static final long serialVersionUID = 1L;
         private TmxFrame owner;
 
         private ActionEdit(String name, Icon icon, TmxFrame owner) {
@@ -480,6 +482,7 @@ public class TmxFrame extends BaseFrame {
      * @version 1.0
      */
     private class ActionPause extends AbstractAction {
+        private static final long serialVersionUID = 1L;
         private ActionPause(String name, Icon icon) {
             super(name, icon);
             super.putValue(SHORT_DESCRIPTION, "Pause Activity");
@@ -500,6 +503,7 @@ public class TmxFrame extends BaseFrame {
      * @version 1.0
      */
     private class ActionPrint extends AbstractAction {
+        private static final long serialVersionUID = 1L;
         private ActionPrint(String name, Icon icon) {
             super(name, icon);
             super.putValue(SHORT_DESCRIPTION, "Print");
@@ -526,6 +530,7 @@ public class TmxFrame extends BaseFrame {
      * @version 1.0
      */
     private class ActionRemove extends AbstractAction {
+        private static final long serialVersionUID = 1L;
         private TmxFrame owner;
 
         private ActionRemove(String name, Icon icon, TmxFrame owner) {
@@ -559,6 +564,7 @@ public class TmxFrame extends BaseFrame {
      * @version 1.0
      */
     private class ActionTmxReader extends AbstractAction {
+        private static final long serialVersionUID = 1L;
         private ActionTmxReader(String name, Icon icon) {
             super(name, icon);
             super.putValue(SHORT_DESCRIPTION, "Start Timex Reader");
@@ -701,6 +707,7 @@ public class TmxFrame extends BaseFrame {
  * @version 1.0
  */
 class ActionHelp extends AbstractAction {
+    private static final long serialVersionUID = 1L;
     ActionHelp(String name, Icon icon) {
         super(name, icon);
         super.putValue(SHORT_DESCRIPTION, "Help");

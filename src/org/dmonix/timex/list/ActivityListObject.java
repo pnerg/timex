@@ -7,7 +7,7 @@ package org.dmonix.timex.list;
  * @author Peter Nerg
  * @version 1.0
  */
-public class ActivityListObject implements Cloneable, Comparable {
+public class ActivityListObject implements Cloneable, Comparable<ActivityListObject>{
 
     private String name;
     private String description;
@@ -33,8 +33,8 @@ public class ActivityListObject implements Cloneable, Comparable {
         this.setStringRepresentation();
     }
 
-    public int compareTo(Object o) {
-        return name.compareToIgnoreCase(((ActivityListObject) o).name);
+    public int compareTo(ActivityListObject o) {
+        return name.compareToIgnoreCase(o.name);
     }
 
     public Object clone() {

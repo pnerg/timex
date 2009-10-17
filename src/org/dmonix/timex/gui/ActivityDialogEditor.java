@@ -30,33 +30,22 @@ import org.dmonix.timex.tmxfilehandler.TimexFileHandler;
  * @version 1.0
  */
 public class ActivityDialogEditor extends JDialog {
+    private static final long serialVersionUID = 1L;
+
     private boolean okPressed = false;
-
-    private transient SortableComboBoxModel modelCombo = new SortableComboBoxModel();
-
-    private transient TimexFileHandler timexFileHandler;
-
-    private JPanel panelMain = new JPanel();
-
-    private GridBagLayout gridBagLayout1 = new GridBagLayout();
-
-    private JTextField txtName = new JTextField();
-
-    private JPanel jPanel2 = new JPanel();
-
-    private FlowLayout flowLayout1 = new FlowLayout();
-
-    private JButton btnCancel = new JButton();
-
-    private JButton btnOk = new JButton();
-
-    private JRadioButton rdBtnNew = new JRadioButton();
-
-    private JComboBox comboActivites = new JComboBox();
-
-    private JRadioButton rdBtnExisting = new JRadioButton();
-
-    private ButtonGroup buttonGroup = new ButtonGroup();
+    private final transient SortableComboBoxModel modelCombo = new SortableComboBoxModel();
+    private final transient TimexFileHandler timexFileHandler;
+    private final JPanel panelMain = new JPanel();
+    private final GridBagLayout gridBagLayout1 = new GridBagLayout();
+    private final JTextField txtName = new JTextField();
+    private final JPanel jPanel2 = new JPanel();
+    private final FlowLayout flowLayout1 = new FlowLayout();
+    private final JButton btnCancel = new JButton();
+    private final JButton btnOk = new JButton();
+    private final JRadioButton rdBtnNew = new JRadioButton();
+    private final JComboBox comboActivites = new JComboBox();
+    private final JRadioButton rdBtnExisting = new JRadioButton();
+    private final ButtonGroup buttonGroup = new ButtonGroup();
 
     public ActivityDialogEditor(Frame frame, TimexFileHandler timexFileHandler) {
         super(frame, "New Activity", true);

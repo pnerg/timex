@@ -39,6 +39,7 @@ import org.dmonix.timex.tmxfilehandler.TimexFileHandler;
  */
 public class TmxEditFrame extends BaseFrame {
     private static final long serialVersionUID = 1L;
+    
     private final String ERROR_LOG = "timex.log";
     private final boolean FRAME_RESIZABLE = false;
     private final boolean FRAME_VISIBLE = true;
@@ -56,51 +57,51 @@ public class TmxEditFrame extends BaseFrame {
     private final ImageIcon ICON_MINUS = Resources.getIconLarge(Resources.pathTimex + "minus.gif");
 
     private TmxReaderFrame owner;
-    private transient ActivityListModel listModel = new ActivityListModel();
+    private final transient ActivityListModel listModel = new ActivityListModel();
 
     // //////////////////////////////////
     // Declare menu items
     // //////////////////////////////////
-    private JMenuBar jMenu = new JMenuBar();
-    private JMenu fileMenu = new JMenu("File");
-    private JMenuItem jmiAdd = new JMenuItem("New");
-    private JMenuItem jmiRem = new JMenuItem("Remove");
-    private JMenuItem jmiEdit = new JMenuItem("Edit");
+    private final JMenuBar jMenu = new JMenuBar();
+    private final JMenu fileMenu = new JMenu("File");
+    private final JMenuItem jmiAdd = new JMenuItem("New");
+    private final JMenuItem jmiRem = new JMenuItem("Remove");
+    private final JMenuItem jmiEdit = new JMenuItem("Edit");
 
     // //////////////////////////////////
     // Declare jPanel1
     // //////////////////////////////////
-    private JLabel lblSum = new JLabel();
-    private JPanel jPanel1 = new JPanel();
+    private final JLabel lblSum = new JLabel();
+    private final JPanel jPanel1 = new JPanel();
 
     // //////////////////////////////////
     // Declare jPanel2
     // //////////////////////////////////
-    private JPanel jPanel2 = new JPanel();
-    private JList listActivities = new JList();
+    private final JPanel jPanel2 = new JPanel();
+    private final JList listActivities = new JList();
 
     // //////////////////////////////////
     // Declare jPanel2
     // //////////////////////////////////
-    private JPanel jPanel3 = new JPanel();
-    private JButton jbtnOk = new JButton("Ok");
-    private JButton jbtnCancel = new JButton("Cancel");
+    private final JPanel jPanel3 = new JPanel();
+    private final JButton jbtnOk = new JButton("Ok");
+    private final JButton jbtnCancel = new JButton("Cancel");
 
     // //////////////////////////////////
     // Declare toolbar
     // //////////////////////////////////
-    private JToolBar jtoolBar = new JToolBar();
-    private JButton jtbarBtnAdd = new JButton(ICON_ADDL);
-    private JButton jtbarBtnEdit = new JButton(ICON_EDITL);
-    private JButton jtbarBtnRem = new JButton(ICON_REML);
-    private JButton jtbarBtnPlus = new JButton(ICON_PLUS);
-    private JButton jtbarBtnMinus = new JButton(ICON_MINUS);
-    private JButton jtbarBtnHelp = new JButton(ICON_HELPL);
-    private JScrollPane scrollPane = new JScrollPane();
-    private String fileName;
+    private final JToolBar jtoolBar = new JToolBar();
+    private final JButton jtbarBtnAdd = new JButton(ICON_ADDL);
+    private final JButton jtbarBtnEdit = new JButton(ICON_EDITL);
+    private final JButton jtbarBtnRem = new JButton(ICON_REML);
+    private final JButton jtbarBtnPlus = new JButton(ICON_PLUS);
+    private final JButton jtbarBtnMinus = new JButton(ICON_MINUS);
+    private final JButton jtbarBtnHelp = new JButton(ICON_HELPL);
+    private final JScrollPane scrollPane = new JScrollPane();
+    private final String fileName;
 
-    private transient TimexFileHandler fHandler = new TimexFileHandler();
-    private transient final Logger log = Logger.getLogger(TmxEditFrame.class.getName());
+    private final transient TimexFileHandler fHandler = new TimexFileHandler();
+    private final transient Logger log = Logger.getLogger(TmxEditFrame.class.getName());
 
     public TmxEditFrame(String fileName) throws Exception {
         this.fileName = fileName;
@@ -264,6 +265,7 @@ public class TmxEditFrame extends BaseFrame {
      * @version 1.0
      */
     private class ActionAdd extends AbstractAction {
+        private static final long serialVersionUID = 1L;
         private TmxEditFrame owner;
 
         private ActionAdd(String name, Icon icon, TmxEditFrame owner) {
@@ -288,6 +290,7 @@ public class TmxEditFrame extends BaseFrame {
      * @version 1.0
      */
     private class ActionEdit extends AbstractAction {
+        private static final long serialVersionUID = 1L;
         private TmxEditFrame owner;
 
         private ActionEdit(String name, Icon icon, TmxEditFrame owner) {
@@ -314,6 +317,7 @@ public class TmxEditFrame extends BaseFrame {
      * @version 1.0
      */
     private class ActionRemove extends AbstractAction {
+        private static final long serialVersionUID = 1L;
         private TmxEditFrame owner;
 
         private ActionRemove(String name, Icon icon, TmxEditFrame owner) {

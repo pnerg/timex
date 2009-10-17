@@ -26,7 +26,7 @@ public class ActivityListModel extends SortableListModel {
      */
     private static final Comparator comparator = new Comparator() {
         public int compare(Object o1, Object o2) {
-            return ((ActivityListObject) o1).compareTo(o2);
+            return ((ActivityListObject) o1).compareTo((ActivityListObject)o2);
         }
     };
 

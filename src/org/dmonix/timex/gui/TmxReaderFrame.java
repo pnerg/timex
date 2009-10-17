@@ -12,6 +12,7 @@ import java.awt.event.WindowEvent;
 import java.io.File;
 import java.io.IOException;
 import java.util.Enumeration;
+import java.util.List;
 import java.util.logging.Logger;
 
 import javax.swing.AbstractAction;
@@ -162,7 +163,7 @@ public class TmxReaderFrame extends BaseFrame {
     }
 
     private void jbInit() throws Exception {
-        this.log.fine("Starting Timex Reader");
+        log.fine("Starting Timex Reader");
 
         // //////////////////////////////////
         // Set toolbar
@@ -469,6 +470,7 @@ public class TmxReaderFrame extends BaseFrame {
      * @version 1.0
      */
     private class ActionEdit extends AbstractAction {
+        private static final long serialVersionUID = 1L;
         private TmxReaderFrame owner;
 
         private ActionEdit(String name, Icon icon, TmxReaderFrame owner) {
@@ -500,6 +502,7 @@ public class TmxReaderFrame extends BaseFrame {
      * @version 1.0
      */
     private class ActionPrint extends AbstractAction {
+        private static final long serialVersionUID = 1L;
         private ActionPrint(String name, Icon icon) {
             super(name, icon);
             super.putValue(SHORT_DESCRIPTION, "Print");
@@ -528,6 +531,7 @@ public class TmxReaderFrame extends BaseFrame {
      * @version 1.0
      */
     private class ActionRemove extends AbstractAction {
+        private static final long serialVersionUID = 1L;
         private TmxReaderFrame owner;
 
         private ActionRemove(String name, Icon icon, TmxReaderFrame owner) {
@@ -569,6 +573,7 @@ public class TmxReaderFrame extends BaseFrame {
      * @version 1.0
      */
     private class ActionRemoveAll extends AbstractAction {
+        private static final long serialVersionUID = 1L;
         private TmxReaderFrame owner;
 
         private ActionRemoveAll(String name, Icon icon, TmxReaderFrame owner) {
@@ -605,6 +610,7 @@ public class TmxReaderFrame extends BaseFrame {
      * @version 1.0
      */
     private class ActionSum extends AbstractAction {
+        private static final long serialVersionUID = 1L;
         private ActionSum(String name, Icon icon) {
             super(name, icon);
             super.putValue(SHORT_DESCRIPTION, "Sum all displayed files");
@@ -623,6 +629,7 @@ public class TmxReaderFrame extends BaseFrame {
      * @version 1.0
      */
     private class ActionMonth extends AbstractAction {
+        private static final long serialVersionUID = 1L;
         private ActionMonth(String name) {
             super(name);
             super.putValue(SHORT_DESCRIPTION, "View this month");
@@ -640,6 +647,7 @@ public class TmxReaderFrame extends BaseFrame {
      * @version 1.0
      */
     private class MonthRadioButtonMenuItem extends JRadioButtonMenuItem {
+        private static final long serialVersionUID = 1L;
         private String monthValue;
 
         MonthRadioButtonMenuItem(String text, String monthValue) {
@@ -658,6 +666,7 @@ public class TmxReaderFrame extends BaseFrame {
      * @version 1.0
      */
     private class YearRadioButtonMenuItem extends JRadioButtonMenuItem {
+        private static final long serialVersionUID = 1L;
         private String yearValue;
 
         YearRadioButtonMenuItem(String text, String yearValue) {
@@ -675,9 +684,10 @@ public class TmxReaderFrame extends BaseFrame {
      * @author Peter Nerg
      * @version 1.0
      */
-    private class DayFileListObject implements Comparable {
+    private class DayFileListObject implements Comparable<DayFileListObject> {
+        private static final long serialVersionUID = 1L;
         private String fileName;
-        private java.util.List<ActivityListObject> activities;
+        private List<ActivityListObject> activities;
 
         private DayFileListObject(String fileName, java.util.List<ActivityListObject> activities) {
             this.fileName = fileName;
@@ -700,7 +710,7 @@ public class TmxReaderFrame extends BaseFrame {
             return this.fileName;
         }
 
-        public int compareTo(Object o) {
+        public int compareTo(DayFileListObject o) {
             return this.toString().compareToIgnoreCase(o.toString());
         }
     }

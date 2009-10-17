@@ -11,6 +11,7 @@ import javax.swing.*;
  * @version 1.0
  */
 public class ActivityDialog extends JDialog {
+    private static final long serialVersionUID = 1L;
     private final JPanel jPanel1 = new JPanel();
     private final GridBagLayout gridBagLayout1 = new GridBagLayout();
     private final JLabel labelName = new JLabel();
