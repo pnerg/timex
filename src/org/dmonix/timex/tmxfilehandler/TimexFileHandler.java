@@ -66,11 +66,19 @@ public class TimexFileHandler {
         String activityString;
         int hour, minute;
         for (String tmp : todayData) {
-            activityString = tmp.substring(6);
-            hour = Integer.parseInt(tmp.substring(0, 2));
-            minute = Integer.parseInt(tmp.substring(3, 5));
-            ActivityListObject listObject = new ActivityListObject(activityString, "", hour, minute);
-            projData.add(listObject);
+            if(tmp == null || tmp.length() < 6)
+                continue;
+            
+            try {
+                activityString = tmp.substring(6);
+                hour = Integer.parseInt(tmp.substring(0, 2));
+                minute = Integer.parseInt(tmp.substring(3, 5));
+                ActivityListObject listObject = new ActivityListObject(activityString, "", hour, minute);
+                projData.add(listObject);
+            }
+            catch(Exception ex) {
+                log.severe("Failed to read current activites, the activity ["+tmp+"] is corrupt");
+            }
         }
         return projData;
     }
@@ -145,9 +153,9 @@ public class TimexFileHandler {
     }
 
     /**
-     * Read the time file and write the content in the file to a vector.
+     * Read the time file and write the content in the file to a list.
      * 
-     * @return The vector is empty if todays file does not exist
+     * @return The list is empty if todays file does not exist
      */
     private List<String> readTodayTimeFile() {
         try {

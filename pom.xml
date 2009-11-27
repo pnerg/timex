@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>org.dmonix</groupId>
+    <artifactId>dmonix</artifactId>
+    <version>1.0</version>
+    <relativePath>../pom.xml</relativePath>
+  </parent>
+
+  <artifactId>timex</artifactId>
+  <name>timex</name>
+  <version>3.1.9</version>
+  <packaging>jar</packaging>
+
+  <description>Timex</description>
+
+  <dependencies>
+
+    <!-- 
+    ===========================
+    = Provided Dependencies  
+    =========================== 
+    -->
+    <dependency>
+      <groupId>org.dmonix</groupId>
+      <artifactId>dmsdk</artifactId>
+      <scope>provided</scope>
+    </dependency>
+
+    <!-- 
+    ===========================
+    = Compile Dependencies  
+    =========================== 
+    -->
+
+    <!-- 
+    ===========================
+    = Test Dependencies  
+    =========================== 
+    -->
+
+    <dependency>
+      <groupId>org.dmonix</groupId>
+      <artifactId>dm-test-common</artifactId>
+      <scope>test</scope>
+    </dependency>
+
+  </dependencies>
+
+  <build>
+    <sourceDirectory>${basedir}/src</sourceDirectory>
+
+    <testResources>
+      <testResource>
+        <directory>${basedir}/test</directory>
+        <filtering>false</filtering>
+      </testResource>
+    </testResources>
+
+    <resources>
+      <resource>
+        <directory>src</directory>
+        <includes>
+          <include>**/*.jpg</include>
+          <include>**/*.gif</include>
+          <include>**/*.properties</include>
+          <include>**/*.xml</include>
+          <include>**/*.ent</include>
+          <include>**/*.soc</include>
+          <include>**/*.dtd</include>
+          <include>**/*.dcl</include>
+        </includes>
+      </resource>
+    </resources>
+
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+      </plugin>
+    </plugins>
+
+  </build>
+
+</project>

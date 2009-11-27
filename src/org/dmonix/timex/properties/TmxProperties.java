@@ -14,6 +14,7 @@ import org.dmonix.xml.XMLPropertyHandler;
 
 /**
  * The Timex properties
+ * 
  * @author Peter Nerg
  * @version 1.0
  */
@@ -21,7 +22,7 @@ public abstract class TmxProperties extends XMLPropertyHandler {
     private static final Logger log = Logger.getLogger(TmxProperties.class.getName());
 
     public static final String PATH = getHome() + File.separator;
-    public static final String DATA_DIR = PATH + File.separator +"data" + File.separator;
+    public static final String DATA_DIR = PATH + File.separator + "data" + File.separator;
     public static final String PROP_LOOKNFEEL = "looknfeel";
     public static final String PROP_TOOLBAR_TMX = "toolbartmx";
     public static final String PROP_TOOLBAR_READER = "toolbarreader";
@@ -46,16 +47,16 @@ public abstract class TmxProperties extends XMLPropertyHandler {
     }
 
     public static String getHome() {
-	String home = System.getProperty("dmonix.home", System.getProperty("user.home"));
-	home += File.separator + "dmonix" + File.separator + "timex";
-	log.log(Level.CONFIG, "Using user.home = "+home);
-	return home;	    
+        String home = System.getProperty("dmonix.home", System.getProperty("user.home"));
+        home += File.separator + "dmonix" + File.separator + "timex";
+        log.log(Level.CONFIG, "Using user.home = " + home);
+        return home;
     }
-    
+
     private static void copyPropertyFile() {
-	InputStream istream = null;
-	OutputStream ostream = null;
-	try {
+        InputStream istream = null;
+        OutputStream ostream = null;
+        try {
             PROPERTY_FILE.getParentFile().mkdirs();
             PROPERTY_FILE.createNewFile();
             istream = TmxProperties.class.getClassLoader().getResourceAsStream("org/dmonix/timex/properties/timex.properties");
@@ -71,8 +72,7 @@ public abstract class TmxProperties extends XMLPropertyHandler {
             }
         } catch (Exception ex) {
             log.log(Level.CONFIG, "Could not copy property file", ex);
-        }
-        finally {
+        } finally {
             IOUtil.closeNoException(istream);
             IOUtil.closeException(ostream);
         }

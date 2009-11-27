@@ -1,16 +1,16 @@
 package org.dmonix.timex.list;
 
 /**
- * The object to use in the activity list. Each object will hold information for
- * one activity, i.e. name and time
+ * The object to use in the activity list. <br>
+ * Each object will hold information for one activity, i.e. name and time
  * 
  * @author Peter Nerg
  * @version 1.0
  */
-public class ActivityListObject implements Cloneable, Comparable<ActivityListObject>{
+public class ActivityListObject implements Cloneable, Comparable<ActivityListObject> {
 
-    private String name;
-    private String description;
+    private final String name;
+    private final String description;
     private int hour;
     private int minute;
 

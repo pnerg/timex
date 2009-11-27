@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+######## @(#)timex.jnlp
+#
+# JNLP File for Timex Application
+###########
+ -->
+
+<jnlp spec="0.2 1.0"
+      codebase="http://www.dmonix.org"
+      href="programs/download/timex/timex.jnlp">
+
+  <information>
+    <title>Timex</title>
+    <vendor>Peter Nerg</vendor>
+    <homepage href="http://www.dmonix.org"/>
+    <description>The ultimate tool for keeping track on time spent on activities at work</description>
+    <description kind="short">The ultimate tool for keeping track on time spent on activities at work</description>
+    <icon href="programs/timex/timex_blue_banner.jpg"/>
+    <offline-allowed/>
+    <shortcut online="true">
+      <desktop/>
+      <menu submenu="DMoniX Applications"/>
+     </shortcut>  
+  </information>
+
+  <security>
+    <all-permissions/>
+  </security>
+
+  <resources>
+    <j2se version="1.5+"/>
+    <jar href="programs/download/timex/timex3x.jar" main="true" download="eager"/>
+    <jar href="programs/download/common/dmsdk2x.jar" main="false" download="eager"/>
+    <jar href="programs/download/common/dmimages.jar" main="false" download="eager"/>
+  </resources>
+
+  <application-desc main-class="org.dmonix.timex.gui.TmxFrame"/>
+</jnlp>
