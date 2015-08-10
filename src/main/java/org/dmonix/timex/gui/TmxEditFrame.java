@@ -34,12 +34,13 @@ import org.dmonix.timex.tmxfilehandler.TimexFileHandler;
 
 /**
  * The Timex edit frame
+ * 
  * @author Peter Nerg
  * @version 1.3.1
  */
 public class TmxEditFrame extends BaseFrame {
     private static final long serialVersionUID = 1L;
-    
+
     private final String ERROR_LOG = "timex.log";
     private final boolean FRAME_RESIZABLE = false;
     private final boolean FRAME_VISIBLE = true;
@@ -106,7 +107,7 @@ public class TmxEditFrame extends BaseFrame {
     public TmxEditFrame(String fileName) throws Exception {
         this.fileName = fileName;
         try {
-            this.setIconImage(new ImageIcon(TmxEditFrame.class.getResource("/org/dmonix/timex/img/timex_blue_banner.jpg")).getImage());
+            this.setIconImage(new ImageIcon(TmxEditFrame.class.getResource("/META-INF/img/timex_blue_banner.jpg")).getImage());
             jbInit();
             this.init();
             this.setActions();
@@ -261,6 +262,7 @@ public class TmxEditFrame extends BaseFrame {
 
     /**
      * The "add" action class.
+     * 
      * @author Peter Nerg
      * @version 1.0
      */
@@ -286,6 +288,7 @@ public class TmxEditFrame extends BaseFrame {
 
     /**
      * The "edit" action class.
+     * 
      * @author Peter Nerg
      * @version 1.0
      */
@@ -313,6 +316,7 @@ public class TmxEditFrame extends BaseFrame {
 
     /**
      * The "remove" action class.
+     * 
      * @author Peter Nerg
      * @version 1.0
      */
@@ -345,6 +349,7 @@ public class TmxEditFrame extends BaseFrame {
 
     /**
      * Internal action listener
+     * 
      * @author Peter Nerg
      * @version 1.0
      */
@@ -365,6 +370,7 @@ public class TmxEditFrame extends BaseFrame {
 
     /**
      * Internal action listener
+     * 
      * @author Peter Nerg
      * @version 1.0
      */
@@ -385,6 +391,7 @@ public class TmxEditFrame extends BaseFrame {
 
     /**
      * Internal action listener
+     * 
      * @author Peter Nerg
      * @version 1.0
      */
@@ -403,6 +410,7 @@ public class TmxEditFrame extends BaseFrame {
 
     /**
      * Internal action listener
+     * 
      * @author Peter Nerg
      * @version 1.0
      */

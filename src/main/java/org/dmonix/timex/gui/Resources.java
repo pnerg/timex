@@ -10,12 +10,13 @@ import org.dmonix.gui.ResourceHandler;
 
 /**
  * Utility for loading resources
+ * 
  * @author Peter Nerg
  * @version 1.0
  */
 public abstract class Resources extends ResourceHandler {
-    public static final String pathTimex = "org/dmonix/timex/img/";
-    public static final String pathDmonix = "org/dmonix/img/";
+    public static final String pathTimex = "META-INF/img/";
+    public static final String pathDmonix = "img/";
 
     private static final Logger log = Logger.getLogger(Resources.class.getName());
 
@@ -23,8 +24,7 @@ public abstract class Resources extends ResourceHandler {
         try {
             return ResourceHandler.getIcon(name);
         } catch (FileNotFoundException ex) {
-            log.log(Level.CONFIG, "Missing resource : " + name + "\n"
-                    + ex.getMessage());
+            log.log(Level.CONFIG, "Missing resource : " + name + "\n" + ex.getMessage());
             return null;
         }
     }
@@ -39,8 +39,7 @@ public abstract class Resources extends ResourceHandler {
         try {
             return ResourceHandler.getIcon(name, 24);
         } catch (FileNotFoundException ex) {
-            log.log(Level.CONFIG, "Missing resource : " + name + "\n"
-                    + ex.getMessage());
+            log.log(Level.CONFIG, "Missing resource : " + name + "\n" + ex.getMessage());
             return null;
         }
     }
@@ -55,8 +54,7 @@ public abstract class Resources extends ResourceHandler {
         try {
             return ResourceHandler.getIcon(name, 16);
         } catch (FileNotFoundException ex) {
-            log.log(Level.CONFIG, "Missing resource : " + name + "\n"
-                    + ex.getMessage());
+            log.log(Level.CONFIG, "Missing resource : " + name + "\n" + ex.getMessage());
             return null;
         }
     }

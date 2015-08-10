@@ -141,7 +141,7 @@ public class TmxFrame extends BaseFrame {
         super();
         try {
             this.initialize();
-            super.configure("/org/dmonix/timex/config/config.xml");
+            super.configure("/META-INF/config.xml");
             this.init();
         } catch (Exception ex) {
             super.exitError(TmxFrame.ERROR_LOG, ex);
@@ -405,7 +405,7 @@ public class TmxFrame extends BaseFrame {
             if (propFile.exists()) {
                 LogManager.getLogManager().readConfiguration(new FileInputStream(propFile));
             } else {
-                LogManager.getLogManager().readConfiguration(TmxFrame.class.getClassLoader().getResourceAsStream("logging.properties"));
+                LogManager.getLogManager().readConfiguration(TmxFrame.class.getClassLoader().getResourceAsStream("META-INF/logging.properties"));
             }
 
             new TmxFrame();
@@ -483,6 +483,7 @@ public class TmxFrame extends BaseFrame {
      */
     private class ActionPause extends AbstractAction {
         private static final long serialVersionUID = 1L;
+
         private ActionPause(String name, Icon icon) {
             super(name, icon);
             super.putValue(SHORT_DESCRIPTION, "Pause Activity");
@@ -504,6 +505,7 @@ public class TmxFrame extends BaseFrame {
      */
     private class ActionPrint extends AbstractAction {
         private static final long serialVersionUID = 1L;
+
         private ActionPrint(String name, Icon icon) {
             super(name, icon);
             super.putValue(SHORT_DESCRIPTION, "Print");
@@ -565,6 +567,7 @@ public class TmxFrame extends BaseFrame {
      */
     private class ActionTmxReader extends AbstractAction {
         private static final long serialVersionUID = 1L;
+
         private ActionTmxReader(String name, Icon icon) {
             super(name, icon);
             super.putValue(SHORT_DESCRIPTION, "Start Timex Reader");
@@ -575,7 +578,7 @@ public class TmxFrame extends BaseFrame {
             try {
                 new TmxReaderFrame(fHandler);
             } catch (Exception ex) {
-                log.log(Level.SEVERE, "Could not start the Timex reader", ex.getMessage());
+                log.log(Level.SEVERE, "Could not start the Timex reader", ex);
             }
         }
     }
@@ -708,6 +711,7 @@ public class TmxFrame extends BaseFrame {
  */
 class ActionHelp extends AbstractAction {
     private static final long serialVersionUID = 1L;
+
     ActionHelp(String name, Icon icon) {
         super(name, icon);
         super.putValue(SHORT_DESCRIPTION, "Help");

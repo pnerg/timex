@@ -4,7 +4,7 @@
   <property name="resizable">false</property>
   <property name="width">227</property>
   <property name="height">350</property>
-  <property name="frameicon">/org/dmonix/timex/img/timex_blue_banner.jpg</property>
+  <property name="frameicon">/META-INF/img/timex_blue_banner.jpg</property>
   <property name="majorversion">3</property>
   <property name="minorversion">1</property>
 </config>

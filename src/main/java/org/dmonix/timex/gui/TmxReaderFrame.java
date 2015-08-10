@@ -49,6 +49,7 @@ import org.dmonix.util.print.SimplePrintableObject;
 
 /**
  * The Timex reader/viewer frame
+ * 
  * @author Peter Nerg
  */
 public class TmxReaderFrame extends BaseFrame {
@@ -153,7 +154,7 @@ public class TmxReaderFrame extends BaseFrame {
      */
     public TmxReaderFrame(TimexFileHandler fHandler) throws Exception {
         this.fHandler = fHandler;
-        this.setIconImage(new ImageIcon(TmxReaderFrame.class.getResource("/org/dmonix/timex/img/timex_blue_banner.jpg")).getImage());
+        this.setIconImage(new ImageIcon(TmxReaderFrame.class.getResource("/META-INF/img/timex_blue_banner.jpg")).getImage());
         try {
             jbInit();
             this.init();
@@ -373,8 +374,7 @@ public class TmxReaderFrame extends BaseFrame {
     }
 
     /**
-     * Display the list of files in jList1 It is possible to filter on both year
-     * and month.
+     * Display the list of files in jList1 It is possible to filter on both year and month.
      * 
      * @param keepSelection
      *            states if the previous list selection is to be kept
@@ -466,6 +466,7 @@ public class TmxReaderFrame extends BaseFrame {
 
     /**
      * The "edit" action class.
+     * 
      * @author Peter Nerg
      * @version 1.0
      */
@@ -498,11 +499,13 @@ public class TmxReaderFrame extends BaseFrame {
 
     /**
      * The "print" action class.
+     * 
      * @author Peter Nerg
      * @version 1.0
      */
     private class ActionPrint extends AbstractAction {
         private static final long serialVersionUID = 1L;
+
         private ActionPrint(String name, Icon icon) {
             super(name, icon);
             super.putValue(SHORT_DESCRIPTION, "Print");
@@ -527,6 +530,7 @@ public class TmxReaderFrame extends BaseFrame {
 
     /**
      * The "remove" action class.
+     * 
      * @author Peter Nerg
      * @version 1.0
      */
@@ -569,6 +573,7 @@ public class TmxReaderFrame extends BaseFrame {
 
     /**
      * The "remove all" action class.
+     * 
      * @author Peter Nerg
      * @version 1.0
      */
@@ -606,11 +611,13 @@ public class TmxReaderFrame extends BaseFrame {
 
     /**
      * The "sum" action class.
+     * 
      * @author Peter Nerg
      * @version 1.0
      */
     private class ActionSum extends AbstractAction {
         private static final long serialVersionUID = 1L;
+
         private ActionSum(String name, Icon icon) {
             super(name, icon);
             super.putValue(SHORT_DESCRIPTION, "Sum all displayed files");
@@ -625,11 +632,13 @@ public class TmxReaderFrame extends BaseFrame {
 
     /**
      * The "month" action class.
+     * 
      * @author Peter Nerg
      * @version 1.0
      */
     private class ActionMonth extends AbstractAction {
         private static final long serialVersionUID = 1L;
+
         private ActionMonth(String name) {
             super(name);
             super.putValue(SHORT_DESCRIPTION, "View this month");
@@ -643,6 +652,7 @@ public class TmxReaderFrame extends BaseFrame {
 
     /**
      * Class for the month radio buttons in the menu.
+     * 
      * @author Peter Nerg
      * @version 1.0
      */
@@ -662,6 +672,7 @@ public class TmxReaderFrame extends BaseFrame {
 
     /**
      * Class for the year radio buttons in the menu.
+     * 
      * @author Peter Nerg
      * @version 1.0
      */
@@ -681,6 +692,7 @@ public class TmxReaderFrame extends BaseFrame {
 
     /**
      * The object used in the list of activity files.
+     * 
      * @author Peter Nerg
      * @version 1.0
      */
@@ -717,6 +729,7 @@ public class TmxReaderFrame extends BaseFrame {
 
     /**
      * Internal action listener
+     * 
      * @author Peter Nerg
      * @version 1.0
      */
@@ -729,6 +742,7 @@ public class TmxReaderFrame extends BaseFrame {
 
     /**
      * Internal action listener
+     * 
      * @author Peter Nerg
      * @version 1.0
      */
@@ -741,6 +755,7 @@ public class TmxReaderFrame extends BaseFrame {
 
     /**
      * Internal action listener
+     * 
      * @author Peter Nerg
      * @version 1.0
      */
@@ -766,6 +781,7 @@ public class TmxReaderFrame extends BaseFrame {
 
     /**
      * Internal action listener
+     * 
      * @author Peter Nerg
      * @version 1.0
      */
@@ -777,6 +793,7 @@ public class TmxReaderFrame extends BaseFrame {
 
     /**
      * Internal action listener
+     * 
      * @author Peter Nerg
      * @version 1.0
      */
