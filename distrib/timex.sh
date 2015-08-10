@@ -1,1 +1,1 @@
-java -cp lib/* org.dmonix.timex.gui.TmxFrame
+java -classpath "lib/*" org.dmonix.timex.gui.TmxFrame
