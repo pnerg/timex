@@ -1,0 +1,39 @@
+<assembly>
+	<formats>
+		<format>zip</format>
+	</formats>
+	<includeBaseDirectory>false</includeBaseDirectory>
+	<fileSets>
+
+		<!-- everything in the "distrib" directory -->
+		<fileSet>
+			<directory>${project.basedir}/distrib</directory>
+			<outputDirectory>${artifactId}-${project.version}/</outputDirectory>
+			<includes>
+				<include>**/*</include>
+			</includes>
+		</fileSet>
+
+		<!-- Include the timex jar file -->
+		<fileSet>
+			<directory>${project.build.directory}</directory>
+			<outputDirectory>${artifactId}-${project.version}/lib
+			</outputDirectory>
+			<includes>
+				<include>${artifactId}-${project.version}.jar</include>
+			</includes>
+		</fileSet>
+	</fileSets>
+
+    <!-- Lib files -->
+	<dependencySets>
+		<!-- Automatically include all specified dependencies of type jar -->
+		<dependencySet>
+			<outputDirectory>${artifactId}-${project.version}/lib</outputDirectory>
+			<includes>
+				<include>*:*:jar</include>
+			</includes>
+		</dependencySet>
+	</dependencySets>
+
+</assembly>
