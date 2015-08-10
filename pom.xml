@@ -38,30 +38,6 @@
   </dependencies>
 
   <build>
-    <sourceDirectory>${basedir}/src</sourceDirectory>
-
-    <testResources>
-      <testResource>
-        <directory>${basedir}/test</directory>
-        <filtering>false</filtering>
-      </testResource>
-    </testResources>
-
-    <resources>
-      <resource>
-        <directory>src</directory>
-        <includes>
-          <include>**/*.jpg</include>
-          <include>**/*.gif</include>
-          <include>**/*.properties</include>
-          <include>**/*.xml</include>
-          <include>**/*.ent</include>
-          <include>**/*.soc</include>
-          <include>**/*.dtd</include>
-          <include>**/*.dcl</include>
-        </includes>
-      </resource>
-    </resources>
 
     <plugins>
 			<plugin>
