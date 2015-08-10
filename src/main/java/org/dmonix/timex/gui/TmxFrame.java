@@ -719,7 +719,7 @@ class ActionHelp extends AbstractAction {
 
     public void actionPerformed(ActionEvent e) {
         try {
-            ClassUtil.openBrowser("http://www.dmonix.org/programs/timex/manual.jsp");
+            ClassUtil.openBrowser("http://timex.sourceforge.net/");
         } catch (Exception ex) {
             Component component = null;
             Object o = e.getSource();
