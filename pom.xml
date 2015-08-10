@@ -2,49 +2,37 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <parent>
-    <groupId>org.dmonix</groupId>
-    <artifactId>dmonix</artifactId>
-    <version>1.0</version>
-    <relativePath>../pom.xml</relativePath>
-  </parent>
-
+  <groupId>org.dmonix</groupId>
   <artifactId>timex</artifactId>
   <name>timex</name>
-  <version>3.1.9</version>
+  <version>4.0-SNAPSHOT</version>
   <packaging>jar</packaging>
-
   <description>Timex</description>
+	<url>https://github.com/pnerg/timex</url>
+	<issueManagement>
+		<system>github</system>
+		<url>https://github.com/pnerg/timex/issues</url>
+	</issueManagement>
+
+	<developers>
+		<developer>
+			<name>Peter Nerg</name>
+		</developer>
+	</developers>
+	<scm>
+		<connection>scm:git:git@github.com:pnerg/timex.git</connection>
+		<developerConnection>scm:git:git@github.com:pnerg/timex.git</developerConnection>
+		<url>git@github.com:pnerg/timex.git</url>
+	  <tag>HEAD</tag>
+  </scm>
 
   <dependencies>
 
-    <!-- 
-    ===========================
-    = Provided Dependencies  
-    =========================== 
-    -->
     <dependency>
       <groupId>org.dmonix</groupId>
       <artifactId>dmsdk</artifactId>
-      <scope>provided</scope>
-    </dependency>
-
-    <!-- 
-    ===========================
-    = Compile Dependencies  
-    =========================== 
-    -->
-
-    <!-- 
-    ===========================
-    = Test Dependencies  
-    =========================== 
-    -->
-
-    <dependency>
-      <groupId>org.dmonix</groupId>
-      <artifactId>dm-test-common</artifactId>
-      <scope>test</scope>
+      <version>3.0-SNAPSHOT</version>
+      <scope>compile</scope>
     </dependency>
 
   </dependencies>
@@ -76,10 +64,29 @@
     </resources>
 
     <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-jar-plugin</artifactId>
-      </plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.7</source>
+					<target>1.7</target>
+					<verbose>true</verbose>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<version>2.2.1</version>
+				<executions>
+					<execution>
+						<id>attach-sources</id>
+						<goals>
+							<goal>jar-no-fork</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
     </plugins>
 
   </build>
