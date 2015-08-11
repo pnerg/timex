@@ -1,5 +1,6 @@
 package org.dmonix.timex.gui;
 
+import java.awt.Image;
 import java.io.FileNotFoundException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -19,6 +20,10 @@ public abstract class Resources extends ResourceHandler {
     public static final String pathDmonix = "img/";
 
     private static final Logger log = Logger.getLogger(Resources.class.getName());
+
+    public static Image getTimexLogo() {
+        return new ImageIcon(Resources.class.getResource("/META-INF/img/timex-logo-256x256.png")).getImage();
+    }
 
     public static ImageIcon getIcon(String name) {
         try {

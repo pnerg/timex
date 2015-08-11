@@ -154,7 +154,7 @@ public class TmxReaderFrame extends BaseFrame {
      */
     public TmxReaderFrame(TimexFileHandler fHandler) throws Exception {
         this.fHandler = fHandler;
-        this.setIconImage(new ImageIcon(TmxReaderFrame.class.getResource("/META-INF/img/timex_blue_banner.jpg")).getImage());
+        this.setIconImage(Resources.getTimexLogo());
         try {
             jbInit();
             this.init();

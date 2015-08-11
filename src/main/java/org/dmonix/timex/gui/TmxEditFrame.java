@@ -107,7 +107,7 @@ public class TmxEditFrame extends BaseFrame {
     public TmxEditFrame(String fileName) throws Exception {
         this.fileName = fileName;
         try {
-            this.setIconImage(new ImageIcon(TmxEditFrame.class.getResource("/META-INF/img/timex_blue_banner.jpg")).getImage());
+            this.setIconImage(Resources.getTimexLogo());
             jbInit();
             this.init();
             this.setActions();
