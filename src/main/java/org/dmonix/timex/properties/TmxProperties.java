@@ -43,7 +43,7 @@ public abstract class TmxProperties extends XMLPropertyHandler {
     }
 
     public static void saveTimexPropertyFile() {
-        XMLPropertyHandler.savePropertyFile(PROPERTY_FILE);
+        // XMLPropertyHandler.savePropertyFile(PROPERTY_FILE);
     }
 
     public static String getHome() {
@@ -59,7 +59,7 @@ public abstract class TmxProperties extends XMLPropertyHandler {
         try {
             PROPERTY_FILE.getParentFile().mkdirs();
             PROPERTY_FILE.createNewFile();
-            istream = TmxProperties.class.getClassLoader().getResourceAsStream("org/dmonix/timex/properties/timex.properties");
+            istream = TmxProperties.class.getClassLoader().getResourceAsStream("/META-INF/timex.properties");
             ostream = new FileOutputStream(PROPERTY_FILE);
 
             byte[] data = new byte[256];
