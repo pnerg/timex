@@ -141,7 +141,12 @@ public class TmxFrame extends BaseFrame {
         super();
         try {
             this.initialize();
-            super.configure("/META-INF/config.xml");
+            super.setTitle("Timex");
+            super.setSize(227, 350);
+            super.setResizable(false);
+            super.setIconImage(new ImageIcon(TmxFrame.class.getResource("/META-INF/img/timex-logo-256x256.png")).getImage());
+
+            // super.configure("/META-INF/config.xml");
             this.init();
         } catch (Exception ex) {
             super.exitError(TmxFrame.ERROR_LOG, ex);
