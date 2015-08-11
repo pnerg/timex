@@ -24,7 +24,7 @@ import org.dmonix.gui.models.SortableComboBoxModel;
 import org.dmonix.timex.tmxfilehandler.TimexFileHandler;
 
 /**
- * Dialog for editing acitivities.
+ * Dialog for editing activities.
  * 
  * @author Peter Nerg
  * @version 1.0
@@ -159,6 +159,7 @@ public class ActivityDialogEditor extends JDialog {
 
     /**
      * The internal cell renderer for the combo box with defined activities.
+     * 
      * @author Peter Nerg
      * @version 1.0
      */
@@ -180,6 +181,7 @@ public class ActivityDialogEditor extends JDialog {
 
     /**
      * The object to use in the combo box with defined activities.
+     * 
      * @author Peter Nerg
      * @version 1.0
      */
