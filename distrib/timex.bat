@@ -1,1 +1,1 @@
-java -cp lib/* org.dmonix.timex.gui.TmxFrame
+start javaw -cp lib/* org.dmonix.timex.gui.TmxFrame
