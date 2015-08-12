@@ -5,12 +5,25 @@
 	<includeBaseDirectory>false</includeBaseDirectory>
 	<fileSets>
 
-		<!-- everything in the "distrib" directory -->
+		<!-- everything but the shell scripts in the "distrib" directory -->
 		<fileSet>
 			<directory>${project.basedir}/distrib</directory>
 			<outputDirectory>${artifactId}-${project.version}/</outputDirectory>
 			<includes>
 				<include>**/*</include>
+			</includes>
+			<excludes>
+				<exclude>**/*.sh</exclude>
+			</excludes>
+		</fileSet>
+
+		<!-- only the shell scripts in the "distrib" directory -->
+		<fileSet>
+			<directory>${project.basedir}/distrib</directory>
+			<outputDirectory>${artifactId}-${project.version}/</outputDirectory>
+			<fileMode>755</fileMode>
+			<includes>
+				<include>**/*.sh</include>
 			</includes>
 		</fileSet>
 
